@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './style.css'
 import ProgressBar from './ProgressBar';
 

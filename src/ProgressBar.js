@@ -5,7 +5,7 @@ export default function Progressbar() {
 	const [isRunning, setIsRunning] = useState(false);
 	useEffect(() => {
 		if (filled < 100 && isRunning) {
-			setTimeout(() => setFilled(prev => prev += 1), 1000)
+			setTimeout(() => setFilled(prev => prev += 1), 100)
 		}
 	},[filled, isRunning])
   return (
@@ -22,7 +22,7 @@ export default function Progressbar() {
       <div className='div-btn'>
     <button className='btn' onClick={()=> setIsRunning(true)}>Run</button>
     <button className='btn' onClick={()=> setIsRunning(false)}>Stop</button>
-    <button className='btn' onClick={()=> setFilled(0)}>Restart</button>
+    <button className='btn' onClick={()=> setFilled(0)}>Reset</button>
   </div> 
 	</div>
   )
